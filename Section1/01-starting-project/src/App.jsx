@@ -2,6 +2,7 @@ import componentsImg from './assets/components.png'
 import { CORE_CONCEPTS } from './data'
 import Header from './components/Header.jsx'
 import CoreConcept from './components/CoreConcept.jsx'
+import TabButton from './components/TabButton.jsx'
 
 
 function App() {
@@ -29,6 +30,14 @@ function App() {
 
               />
             </ul>
+          </section>
+          <section id="examples">
+            <menu>
+                <TabButton>Components</TabButton>
+                <TabButton>Components</TabButton>
+                <TabButton>Components</TabButton>
+                <TabButton>Components</TabButton>
+            </menu>
           </section>
       </main>
     </div>

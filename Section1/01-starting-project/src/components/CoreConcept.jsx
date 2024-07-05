@@ -1,3 +1,5 @@
+import './css/CoreConcepts.css'
+
 export default function CoreConcept(props)
 {
   return (
