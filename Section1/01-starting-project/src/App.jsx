@@ -19,7 +19,7 @@ function App() {
   }
   console.log(selectedTopic)
   return (
-    <div>
+    <>
       <Header></Header>
       <main>
           <section id="core-concepts">
@@ -73,7 +73,7 @@ function App() {
               
           </section>
       </main>
-    </div>
+    </>
   );
 }
 
