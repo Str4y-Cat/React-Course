@@ -17,14 +17,19 @@ function App() {
     // console.log(selectedButton)
       // switch(selectedButton)
   }
-  
+  console.log(selectedTopic)
   return (
     <div>
       <Header></Header>
       <main>
           <section id="core-concepts">
             <ul>
-              <CoreConcept 
+              {CORE_CONCEPTS.map((conceptItem)=>
+                (
+                  <CoreConcept {...conceptItem}/>
+                ))}
+                
+              {/* <CoreConcept 
               title={CORE_CONCEPTS[0].title}
               description={CORE_CONCEPTS[0].description}
               image={CORE_CONCEPTS[0].image}
@@ -40,26 +45,32 @@ function App() {
               <CoreConcept 
               {...CORE_CONCEPTS[3]}
 
-              />
+              /> */}
             </ul>
           </section>
           <section id="examples">
             <menu>
-                <TabButton handleClick={()=>handleClick('components')}>Components</TabButton>
-                <TabButton handleClick={()=>handleClick('jsx')}>JSX</TabButton>
-                <TabButton handleClick={()=>handleClick('props')}>Props</TabButton>
-                <TabButton handleClick={()=>handleClick('state')}>State</TabButton>
+                <TabButton isSelected={selectedTopic.title==='Components'} handleClick={()=>handleClick('components')}>Components</TabButton>
+                <TabButton isSelected={selectedTopic.title==='JSX'} handleClick={()=>handleClick('jsx')}>JSX</TabButton>
+                <TabButton isSelected={selectedTopic.title==='Props'} handleClick={()=>handleClick('props')}>Props</TabButton>
+                <TabButton isSelected={selectedTopic.title==='State'} handleClick={()=>handleClick('state')}>State</TabButton>
             </menu>
-            <div  id="tab-content">
-              <h3>{selectedTopic.title}</h3>
-              <p>{selectedTopic.description}</p>
-              <pre>
-                <code>
-                {selectedTopic.code}
-                </code>
-              </pre>
+            
+              {!selectedTopic?
+              <p>Please select a topic.</p>
+              :
+              <div  id="tab-content">
+                <h3>{selectedTopic.title}</h3>
+                <p>{selectedTopic.description}</p>
+                <pre>
+                  <code>
+                  {selectedTopic.code}
+                  </code>
+                </pre>
 
-            </div>
+              </div>
+              }
+              
           </section>
       </main>
     </div>
