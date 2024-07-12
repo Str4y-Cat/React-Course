@@ -6,7 +6,7 @@ export default function Input({value,name, updateValues})
     return(
         <div >
             <label>{name}</label>
-            <input type="number" value={value} onChange={(e)=>updateValues(name,e.target.value)}></input>
+            <input type="number" required value={value} onChange={(e)=>updateValues(name,e.target.value)}></input>
         </div>
     )
 }

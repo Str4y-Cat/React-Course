@@ -5,7 +5,7 @@ export default function UserInput({values, updateValues})
     // console.log('user inputs')
     
     const {initialInvestment,annualInvestment,expectedReturn,duration}=values
-    return <div id="user-input">
+    return <section id="user-input">
 
         <div className="input-group">
             <Input value={initialInvestment} name={'initialInvestment'} updateValues={updateValues}></Input>
@@ -19,6 +19,6 @@ export default function UserInput({values, updateValues})
 
         </div>
         
-    </div>
+    </section>
 
 }

@@ -19,13 +19,18 @@ export default function Results({values})
     // console.log(temp)
     return(
         <table className="" id="result">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Annual Investment</th>
+                    <th>Interest</th>
+                    <th>Value End Of Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                {items}
+            </tbody>
             
-                <th>Year</th>
-                <th>Annual Investment</th>
-                <th>Interest</th>
-                <th>Value End Of Year</th>
-            
-            {items}
 
         </table>
     )
