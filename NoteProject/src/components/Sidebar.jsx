@@ -18,7 +18,7 @@ export default function Sidebar({projects,updatePage}){
     
 
     return (
-        <div id="sidebar" className="bg-gray-900 w-3/12 h-full text-slate-100">
+        <div id="sidebar" className="bg-gray-900 w-3/12 h-full text-slate-100 mt-10 p-5 rounded-tr-lg">
             <h1>Your Projects</h1>
             <Button onClick={()=>updatePage("newProject")}>Add Projects</Button>
             {projects.length>0 && <ol>{projectTitles}</ol>}
