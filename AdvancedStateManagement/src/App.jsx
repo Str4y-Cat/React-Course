@@ -11,7 +11,7 @@ function App() {
   return (
     <CartContextProvider>
       <Header/>
-      <Shop onAddItemToCart={handleAddItemToCart} />
+      <Shop  />
     </CartContextProvider>
   );
 }
